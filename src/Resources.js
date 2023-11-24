@@ -118,7 +118,7 @@ const Resources = () => {
       <header>
         <h2>Resources calculator</h2>
         <button className="resetBtn" onClick={handleReset}>
-          Reset all
+          Reset
         </button>
       </header>
 
@@ -373,7 +373,7 @@ const Resources = () => {
         </div>
 
         <button className="resetBtn" onClick={handleReset}>
-          Reset all
+          Reset
         </button>
       </div>
     </div>
