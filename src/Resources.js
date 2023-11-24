@@ -93,7 +93,7 @@ const Resources = () => {
 
   const calculateMana = () => {
     const total =
-      mana.k1 * 300 +
+      mana.k1 * 500 +
       mana.k10 * 3000 +
       mana.k50 * 15000 +
       mana.k150 * 50000 +
@@ -270,7 +270,7 @@ const Resources = () => {
           <h3>Mana</h3>
           <section className="rssSection">
             <InputField
-              label="300"
+              label="500"
               name="k1"
               value={mana.k1}
               onChange={(e) => handleResources(e, type.mana)}
