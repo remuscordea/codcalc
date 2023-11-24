@@ -10,7 +10,7 @@ const InputField = ({ label, name, value, onChange }) => (
         name={name}
         value={value}
         onChange={onChange}
-        style={{ width: "80px" }}
+        style={{ width: "100px" }}
       />
     </label>
     <br />

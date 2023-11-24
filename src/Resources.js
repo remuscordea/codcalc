@@ -18,6 +18,7 @@ const Resources = () => {
     k500: 0,
     m1: 0,
     m5: 0,
+    open: 0,
   };
   const [gold, setGold] = useState(initialResources);
   const [wood, setWood] = useState(initialResources);
@@ -73,7 +74,8 @@ const Resources = () => {
       state[rssType].k150 * 150000 +
       state[rssType].k500 * 500000 +
       state[rssType].m1 * 1500000 +
-      state[rssType].m5 * 5000000;
+      state[rssType].m5 * 5000000 +
+      state[rssType].open * 1;
 
     return total.toLocaleString("en-US");
   };
@@ -86,7 +88,8 @@ const Resources = () => {
       ore.k150 * 112500 +
       ore.k500 * 375000 +
       ore.m1 * 1125000 +
-      ore.m5 * 3750000;
+      ore.m5 * 3750000 +
+      ore.open * 1;
 
     return total.toLocaleString("en-US");
   };
@@ -99,7 +102,8 @@ const Resources = () => {
       mana.k150 * 50000 +
       mana.k500 * 200000 +
       mana.m1 * 600000 +
-      mana.m5 * 2000000;
+      mana.m5 * 2000000 +
+      mana.open * 1;
 
     return total.toLocaleString("en-US");
   };
@@ -122,6 +126,12 @@ const Resources = () => {
         <article className={classnames("rssArticle", "gold")}>
           <h3>Gold</h3>
           <section className="rssSection">
+            <InputField
+              label="Gathered"
+              name="open"
+              value={gold.open}
+              onChange={(e) => handleResources(e, type.gold)}
+            />
             <InputField
               label="1.000"
               name="k1"
@@ -172,6 +182,12 @@ const Resources = () => {
           <h3>Wood</h3>
           <section className="rssSection">
             <InputField
+              label="Gathered"
+              name="open"
+              value={wood.open}
+              onChange={(e) => handleResources(e, type.wood)}
+            />
+            <InputField
               label="1.000"
               name="k1"
               value={wood.k1}
@@ -221,6 +237,12 @@ const Resources = () => {
           <h3>Ore</h3>
           <section className="rssSection">
             <InputField
+              label="Gathered"
+              name="open"
+              value={ore.open}
+              onChange={(e) => handleResources(e, type.ore)}
+            />
+            <InputField
               label="750"
               name="k1"
               value={ore.k1}
@@ -269,6 +291,12 @@ const Resources = () => {
         <article className={classnames("rssArticle", "mana")}>
           <h3>Mana</h3>
           <section className="rssSection">
+            <InputField
+              label="Gathered"
+              name="open"
+              value={mana.open}
+              onChange={(e) => handleResources(e, type.mana)}
+            />
             <InputField
               label="500"
               name="k1"
