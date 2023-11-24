@@ -78,10 +78,36 @@ const Resources = () => {
     return total.toLocaleString("en-US");
   };
 
+  const calculateOre = () => {
+    const total =
+      ore.k1 * 750 +
+      ore.k10 * 7500 +
+      ore.k50 * 37500 +
+      ore.k150 * 112500 +
+      ore.k500 * 375000 +
+      ore.m1 * 1125000 +
+      ore.m5 * 3750000;
+
+    return total.toLocaleString("en-US");
+  };
+
+  const calculateMana = () => {
+    const total =
+      mana.k1 * 300 +
+      mana.k10 * 3000 +
+      mana.k50 * 15000 +
+      mana.k150 * 50000 +
+      mana.k500 * 200000 +
+      mana.m1 * 600000 +
+      mana.m5 * 2000000;
+
+    return total.toLocaleString("en-US");
+  };
+
   const totalGold = calculateTotalResources(type.gold, { gold });
   const totalWood = calculateTotalResources(type.wood, { wood });
-  const totalOre = calculateTotalResources(type.ore, { ore });
-  const totalMana = calculateTotalResources(type.mana, { mana });
+  const totalOre = calculateOre();
+  const totalMana = calculateMana();
 
   return (
     <div>
@@ -195,43 +221,43 @@ const Resources = () => {
           <h3>Ore</h3>
           <section className="rssSection">
             <InputField
-              label="1.000"
+              label="750"
               name="k1"
               value={ore.k1}
               onChange={(e) => handleResources(e, type.ore)}
             />
             <InputField
-              label="10.000"
+              label="7.500"
               name="k10"
               value={ore.k10}
               onChange={(e) => handleResources(e, type.ore)}
             />
             <InputField
-              label="50.000"
+              label="37.500"
               name="k50"
               value={ore.k50}
               onChange={(e) => handleResources(e, type.ore)}
             />
             <InputField
-              label="150.000"
+              label="112.500"
               name="k150"
               value={ore.k150}
               onChange={(e) => handleResources(e, type.ore)}
             />
             <InputField
-              label="500.000"
+              label="375.000"
               name="k500"
               value={ore.k500}
               onChange={(e) => handleResources(e, type.ore)}
             />
             <InputField
-              label="1.500.000"
+              label="1.125.000"
               name="m1"
               value={ore.m1}
               onChange={(e) => handleResources(e, type.ore)}
             />
             <InputField
-              label="5.000.000"
+              label="3.750.000"
               name="m5"
               value={ore.m5}
               onChange={(e) => handleResources(e, type.ore)}
@@ -244,43 +270,43 @@ const Resources = () => {
           <h3>Mana</h3>
           <section className="rssSection">
             <InputField
-              label="1.000"
+              label="300"
               name="k1"
               value={mana.k1}
               onChange={(e) => handleResources(e, type.mana)}
             />
             <InputField
-              label="10.000"
+              label="3.000"
               name="k10"
               value={mana.k10}
               onChange={(e) => handleResources(e, type.mana)}
             />
             <InputField
-              label="50.000"
+              label="15.000"
               name="k50"
               value={mana.k50}
               onChange={(e) => handleResources(e, type.mana)}
             />
             <InputField
-              label="150.000"
+              label="50.000"
               name="k150"
               value={mana.k150}
               onChange={(e) => handleResources(e, type.mana)}
             />
             <InputField
-              label="500.000"
+              label="200.000"
               name="k500"
               value={mana.k500}
               onChange={(e) => handleResources(e, type.mana)}
             />
             <InputField
-              label="1.500.000"
+              label="600.000"
               name="m1"
               value={mana.m1}
               onChange={(e) => handleResources(e, type.mana)}
             />
             <InputField
-              label="5.000.000"
+              label="2.000.000"
               name="m5"
               value={mana.m5}
               onChange={(e) => handleResources(e, type.mana)}
