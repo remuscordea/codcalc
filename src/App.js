@@ -7,7 +7,7 @@ import "./App.css";
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="pageLayout">
         <nav>
           <ul>
             <li>

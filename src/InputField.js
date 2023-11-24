@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputField = ({ label, name, value, onChange, placeholder }) => (
-  <div style={{ height: "70px" }}>
+  <div style={{ height: "50px" }}>
     <label>
       <span>{label}</span>
       <br />

@@ -124,7 +124,10 @@ const Resources = () => {
 
       <div className="rssContainer">
         <article className={classnames("rssArticle", "gold")}>
-          <h3>Gold</h3>
+          <div className="articleHeader">
+            <h3>Gold</h3>
+            <span className={"sectionTotal"}>({totalGold})</span>
+          </div>
           <section className="rssSection">
             <InputField
               label="Gathered"
@@ -176,11 +179,14 @@ const Resources = () => {
               onChange={(e) => handleResources(e, type.gold)}
             />
           </section>
-          <span className={"sectionTotal"}>{`Total: ${totalGold}`}</span>
         </article>
 
         <article className={classnames("rssArticle", "wood")}>
-          <h3>Wood</h3>
+          <div className="articleHeader">
+            <h3>Wood</h3>
+            <span className={"sectionTotal"}>({totalWood})</span>
+          </div>
+
           <section className="rssSection">
             <InputField
               label="Gathered"
@@ -232,11 +238,13 @@ const Resources = () => {
               onChange={(e) => handleResources(e, type.wood)}
             />
           </section>
-          <span className={"sectionTotal"}>{`Total: ${totalWood}`}</span>
         </article>
 
         <article className={classnames("rssArticle", "ore")}>
-          <h3>Ore</h3>
+          <div className="articleHeader">
+            <h3>Ore</h3>
+            <span className={"sectionTotal"}>({totalOre})</span>
+          </div>
           <section className="rssSection">
             <InputField
               label="Gathered"
@@ -288,11 +296,13 @@ const Resources = () => {
               onChange={(e) => handleResources(e, type.ore)}
             />
           </section>
-          <span className={"sectionTotal"}>{`Total: ${totalOre}`}</span>
         </article>
 
         <article className={classnames("rssArticle", "mana")}>
-          <h3>Mana</h3>
+          <div className="articleHeader">
+            <h3>Mana</h3>
+            <span className={"sectionTotal"}>({totalMana})</span>
+          </div>
           <section className="rssSection">
             <InputField
               label="Gathered"
@@ -344,7 +354,6 @@ const Resources = () => {
               onChange={(e) => handleResources(e, type.mana)}
             />
           </section>
-          <span className={"sectionTotal"}>{`Total: ${totalMana}`}</span>
         </article>
       </div>
       <div className="summaryContainer">

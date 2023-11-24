@@ -130,7 +130,12 @@ const Speedups = () => {
 
       <div className="speedupsContainer">
         <article className={classnames("speedupsArticle", "building")}>
-          <h3>Building</h3>
+          <div className="articleHeader">
+            <h3>Building</h3>
+            <span className={"sectionTotal"}>
+              {`(${buildingTimeObject.days} days, ${buildingTimeObject.hours} hours and ${buildingTimeObject.minutes} minutes)`}
+            </span>
+          </div>
           <section className="speedupsSection">
             <InputField
               label="1 minute"
@@ -211,12 +216,14 @@ const Speedups = () => {
               onChange={(e) => handleSpeedups(e, type.building)}
             />
           </section>
-          <span className={"sectionTotal"}>
-            {`Total: ${buildingTimeObject.days} days, ${buildingTimeObject.hours} hours and ${buildingTimeObject.minutes} minutes`}
-          </span>
         </article>
         <article className={classnames("speedupsArticle", "training")}>
-          <h3>Training</h3>
+          <div className="articleHeader">
+            <h3>Training</h3>
+            <span className={"sectionTotal"}>
+              {`(${trainingTimeObject.days} days, ${trainingTimeObject.hours} hours and ${trainingTimeObject.minutes} minutes)`}
+            </span>
+          </div>
           <section className="speedupsSection">
             <InputField
               label="1 minute"
@@ -297,12 +304,14 @@ const Speedups = () => {
               onChange={(e) => handleSpeedups(e, type.training)}
             />
           </section>
-          <span className={"sectionTotal"}>
-            {`Total: ${trainingTimeObject.days} days, ${trainingTimeObject.hours} hours and ${trainingTimeObject.minutes} minutes`}
-          </span>
         </article>
         <article className={classnames("speedupsArticle", "research")}>
-          <h3>Research</h3>
+          <div className="articleHeader">
+            <h3>Research</h3>
+            <span className={"sectionTotal"}>
+              {`(${researchTimeObject.days} days, ${researchTimeObject.hours} hours and ${researchTimeObject.minutes} minutes )`}
+            </span>
+          </div>
           <section className="speedupsSection">
             <InputField
               label="1 minute"
@@ -383,12 +392,14 @@ const Speedups = () => {
               onChange={(e) => handleSpeedups(e, type.research)}
             />
           </section>
-          <span className={"sectionTotal"}>
-            {`Total: ${researchTimeObject.days} days, ${researchTimeObject.hours} hours and ${researchTimeObject.minutes} minutes`}
-          </span>
         </article>
         <article className={classnames("speedupsArticle", "universal")}>
-          <h3>Universals</h3>
+          <div className="articleHeader">
+            <h3>Universals</h3>
+            <span className={"sectionTotal"}>
+              {`(${universalTimeObject.days} days, ${universalTimeObject.hours} hours and ${universalTimeObject.minutes} minutes)`}
+            </span>
+          </div>
           <section className="speedupsSection">
             <InputField
               label="1 minute"
@@ -469,9 +480,6 @@ const Speedups = () => {
               onChange={(e) => handleSpeedups(e, type.universal)}
             />
           </section>
-          <span className={"sectionTotal"}>
-            {`Total: ${universalTimeObject.days} days, ${universalTimeObject.hours} hours and ${universalTimeObject.minutes} minutes`}
-          </span>
         </article>
       </div>
       <div className="summaryContainer">
