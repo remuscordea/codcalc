@@ -9,7 +9,7 @@
     width: 100%;
     margin: 10px 0;
     border-radius: 10px;
-    border: solid 1px lightgray;
+    background-color: #fff;
 }
 
 .rssArticle.gold h3 {
@@ -17,8 +17,7 @@
 }
 
 .rssArticle.gold {
-    background-color: rgb(255, 251, 231);
-    border: 2px solid rgb(204, 174, 1);
+    border: 3px solid rgb(204, 174, 1);
 }
 
 .rssArticle.wood h3 {
@@ -26,8 +25,7 @@
 }
 
 .rssArticle.wood {
-    background-color: rgb(255, 245, 233);
-    border: 2px solid rgb(136, 109, 76);
+    border: 3px solid rgb(136, 109, 76);
 }
 
 .rssArticle.ore h3 {
@@ -35,8 +33,7 @@
 }
 
 .rssArticle.ore {
-    background-color: rgb(241, 241, 241);
-    border: 2px solid rgb(107, 107, 107);
+    border: 3px solid rgb(107, 107, 107);
 }
 
 .rssArticle.mana h3 {
@@ -44,7 +41,6 @@
 }
 
 .rssArticle.mana {
-    background-color: rgb(248, 249, 255);
     border: 2px solid rgb(117, 131, 255);
 }
 

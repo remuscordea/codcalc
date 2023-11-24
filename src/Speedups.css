@@ -9,27 +9,39 @@
     width: 100%;
     margin: 10px 0;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px #eee;
+    background-color: #fff;
 }
 
 .speedupsArticle.building {
-    background-color: rgb(239, 255, 241);
-    border: 2px solid #58ad58;
+    border: 3px solid #58ad58;
+}
+
+.speedupsArticle.building h3 {
+    color: #3a833a;
 }
 
 .speedupsArticle.training {
-    background-color: rgb(255, 239, 239);
-    border: 2px solid #ed4c4c
+    border: 3px solid #ed4c4c
+}
+
+.speedupsArticle.training h3 {
+    color: #ff3f3f
 }
 
 .speedupsArticle.research {
-    background-color: rgb(238, 247, 255);
-    border: 2px solid #8ccdf5;
+    border: 3px solid #0086d7;
+}
+
+.speedupsArticle.research h3 {
+    color: #0086d7;
 }
 
 .speedupsArticle.universal {
-    background-color: rgb(243, 243, 243);
-    border: 2px solid #8f8f8f;
+    border: 3px solid #8f8f8f;
+}
+
+.speedupsArticle.universal h3 {
+    color: #737272
 }
 
 .speedupsSection {
