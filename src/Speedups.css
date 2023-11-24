@@ -9,22 +9,27 @@
     width: 100%;
     margin: 10px 0;
     border-radius: 10px;
+    box-shadow: 1px 1px 10px #eee;
 }
 
 .speedupsArticle.building {
     background-color: rgb(239, 255, 241);
+    border: 2px solid #58ad58;
 }
 
 .speedupsArticle.training {
     background-color: rgb(255, 239, 239);
+    border: 2px solid #ed4c4c
 }
 
 .speedupsArticle.research {
     background-color: rgb(238, 247, 255);
+    border: 2px solid #8ccdf5;
 }
 
 .speedupsArticle.universal {
     background-color: rgb(243, 243, 243);
+    border: 2px solid #8f8f8f;
 }
 
 .speedupsSection {

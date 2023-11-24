@@ -1,12 +1,46 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #1e1e1e
+}
+
+h1 {
+  color: #fff;
+  text-shadow: #000 0px 0px 4px;
+}
+
+h2 {
+  color: #000;
+  text-shadow: #fff 0px 0 10px;
+}
+
+h3 {
+  color: #222225;
+}
+
+.overlay {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 17, 255, 0.096), #fff), 
+                    url('./img/cod3.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
 .pageLayout {
   height: 100vh;
   margin-top: -60px;
   padding-top: 120px;
+  width: 100vw;
+}
+
+.pageContent {
+  position: relative;
+  z-index: 2;
 }
 
 nav {
   background-color: #202020;
-  border-bottom: 3px solid #ff7b00;
+  border-bottom: 3px solid #f55252;
   padding: 5px 0;
   position: fixed;
   top: 0;
@@ -83,7 +117,7 @@ header {
 }
 
 .resetBtn {
-  background-color: #ff7b00;
+  background-color: #ff003e;
   color: #fff;
   padding: 10px 20px;
   border: none;
