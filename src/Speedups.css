@@ -11,10 +11,6 @@
     border-radius: 10px;
 }
 
-.speedupsArticle h3 {
-    margin: 0;
-}
-
 .speedupsArticle.building {
     background-color: rgb(239, 255, 241);
 }
