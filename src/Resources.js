@@ -11,14 +11,14 @@ const Resources = () => {
     mana: "mana",
   };
   const initialResources = {
-    k1: 0,
-    k10: 0,
-    k50: 0,
-    k150: 0,
-    k500: 0,
-    m1: 0,
-    m5: 0,
-    open: 0,
+    k1: "",
+    k10: "",
+    k50: "",
+    k150: "",
+    k500: "",
+    m1: "",
+    m5: "",
+    open: "",
   };
   const [gold, setGold] = useState(initialResources);
   const [wood, setWood] = useState(initialResources);
@@ -68,42 +68,42 @@ const Resources = () => {
 
   const calculateTotalResources = (rssType, state) => {
     const total =
-      state[rssType].k1 * 1000 +
-      state[rssType].k10 * 10000 +
-      state[rssType].k50 * 50000 +
-      state[rssType].k150 * 150000 +
-      state[rssType].k500 * 500000 +
-      state[rssType].m1 * 1500000 +
-      state[rssType].m5 * 5000000 +
-      state[rssType].open * 1;
+      (parseInt(state[rssType].k1) || 0) * 1000 +
+      (parseInt(state[rssType].k10) || 0) * 10000 +
+      (parseInt(state[rssType].k50) || 0) * 50000 +
+      (parseInt(state[rssType].k150) || 0) * 150000 +
+      (parseInt(state[rssType].k500) || 0) * 500000 +
+      (parseInt(state[rssType].m1) || 0) * 1500000 +
+      (parseInt(state[rssType].m5) || 0) * 5000000 +
+      (parseInt(state[rssType].open) || 0) * 1;
 
     return total.toLocaleString("en-US");
   };
 
   const calculateOre = () => {
     const total =
-      ore.k1 * 750 +
-      ore.k10 * 7500 +
-      ore.k50 * 37500 +
-      ore.k150 * 112500 +
-      ore.k500 * 375000 +
-      ore.m1 * 1125000 +
-      ore.m5 * 3750000 +
-      ore.open * 1;
+      (parseInt(ore.k1) || 0) * 750 +
+      (parseInt(ore.k10) || 0) * 7500 +
+      (parseInt(ore.k50) || 0) * 37500 +
+      (parseInt(ore.k150) || 0) * 112500 +
+      (parseInt(ore.k500) || 0) * 375000 +
+      (parseInt(ore.m1) || 0) * 1125000 +
+      (parseInt(ore.m5) || 0) * 3750000 +
+      (parseInt(ore.open) || 0) * 1;
 
     return total.toLocaleString("en-US");
   };
 
   const calculateMana = () => {
     const total =
-      mana.k1 * 500 +
-      mana.k10 * 3000 +
-      mana.k50 * 15000 +
-      mana.k150 * 50000 +
-      mana.k500 * 200000 +
-      mana.m1 * 600000 +
-      mana.m5 * 2000000 +
-      mana.open * 1;
+      (parseInt(mana.k1) || 0) * 500 +
+      (parseInt(mana.k10) || 0) * 3000 +
+      (parseInt(mana.k50) || 0) * 15000 +
+      (parseInt(mana.k150) || 0) * 50000 +
+      (parseInt(mana.k500) || 0) * 200000 +
+      (parseInt(mana.m1) || 0) * 600000 +
+      (parseInt(mana.m5) || 0) * 2000000 +
+      (parseInt(mana.open) || 0) * 1;
 
     return total.toLocaleString("en-US");
   };
@@ -129,6 +129,7 @@ const Resources = () => {
             <InputField
               label="Gathered"
               name="open"
+              placeholder="Enter value"
               value={gold.open}
               onChange={(e) => handleResources(e, type.gold)}
             />
@@ -184,6 +185,7 @@ const Resources = () => {
             <InputField
               label="Gathered"
               name="open"
+              placeholder="Enter value"
               value={wood.open}
               onChange={(e) => handleResources(e, type.wood)}
             />
@@ -239,6 +241,7 @@ const Resources = () => {
             <InputField
               label="Gathered"
               name="open"
+              placeholder="Enter value"
               value={ore.open}
               onChange={(e) => handleResources(e, type.ore)}
             />
@@ -294,6 +297,7 @@ const Resources = () => {
             <InputField
               label="Gathered"
               name="open"
+              placeholder="Enter value"
               value={mana.open}
               onChange={(e) => handleResources(e, type.mana)}
             />
