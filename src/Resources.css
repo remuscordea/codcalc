@@ -1,0 +1,103 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.rssContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rssArticle {
+    padding: 20px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.rssArticle h3 {
+    /* background-color: rgb(77 63 32); */
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 60px;
+}
+
+.rssArticle.gold h3 {
+    color: rgb(204, 174, 1);
+}
+
+.rssArticle.gold {
+    background-color: rgb(255, 251, 231);
+}
+
+.rssArticle.wood h3 {
+    color: rgb(136, 109, 76);
+}
+
+.rssArticle.wood {
+    background-color: rgb(255, 245, 233);
+}
+
+.rssArticle.ore h3 {
+    color: rgb(107, 107, 107);
+}
+
+.rssArticle.ore {
+    background-color: rgb(241, 241, 241);
+}
+
+.rssArticle.mana h3 {
+    color: rgb(117, 131, 255);
+}
+
+.rssArticle.mana {
+    background-color: rgb(248, 249, 255);
+}
+
+.rssSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.summaryContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.resetBtn {
+    background-color: #ff7b00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    flex-flow: column;
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 768px) {
+    .speedupsContainer {
+        justify-content: space-around;
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1024px) {
+    .speedupsContainer {
+        justify-content: space-between;
+    }
+
+    .summaryContainer {
+        justify-content: space-between;
+        flex-flow: row;
+    }
+}

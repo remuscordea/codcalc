@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Speedups from "./Speedups";
+import Resources from "./Resources";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Speedups</Link>
+            </li>
+            <li>
+              <Link to="/resources">Resources</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <div className={"main"}>
+          <h1>CoD Tools</h1>
+
+          <Routes>
+            <Route path="/" element={<Speedups />} />
+            <Route path="/resources" element={<Resources />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
