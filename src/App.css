@@ -6,11 +6,13 @@ body {
 h1 {
   color: #fff;
   text-shadow: #000 0px 0px 4px;
+  font-size: 32px;
 }
 
 h2 {
   color: #000;
   text-shadow: #fff 0px 0 10px;
+  font-size: 28px;
 }
 
 h3 {
@@ -30,7 +32,6 @@ h3 {
   height: 100vh;
   margin-top: -60px;
   padding-top: 120px;
-  width: 100vw;
 }
 
 .pageContent {
@@ -84,7 +85,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 70px;
 }
 
 .articleHeader {
@@ -105,8 +106,8 @@ header {
 }
 
 .summaryContainer {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -129,6 +130,14 @@ header {
 
 /* Media query for larger screens */
 @media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
   .summaryContainer {
     justify-content: space-between;
     flex-flow: row;

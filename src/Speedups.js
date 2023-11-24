@@ -122,7 +122,7 @@ const Speedups = () => {
   return (
     <div>
       <header>
-        <h2>Speedups calculator</h2>
+        <h2>Speedups</h2>
         <button className="resetBtn" onClick={handleReset}>
           Reset
         </button>

@@ -22,7 +22,7 @@ const App = () => {
           </nav>
 
           <div className={"main"}>
-            <h1>Call of Dragons Toolbox</h1>
+            <h1>Call of Dragons Calculator</h1>
 
             <Routes>
               <Route path="/" element={<Speedups />} />

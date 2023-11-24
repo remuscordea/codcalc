@@ -116,7 +116,7 @@ const Resources = () => {
   return (
     <div>
       <header>
-        <h2>Resources calculator</h2>
+        <h2>Resources</h2>
         <button className="resetBtn" onClick={handleReset}>
           Reset
         </button>
