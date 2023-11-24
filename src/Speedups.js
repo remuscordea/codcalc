@@ -11,19 +11,19 @@ const Speedups = () => {
     universal: "universal",
   };
   const initialSpeedupsState = {
-    minutes1: 0,
-    minutes5: 0,
-    minutes10: 0,
-    minutes15: 0,
-    minutes30: 0,
-    minutes60: 0,
-    hours3: 0,
-    hours8: 0,
-    hours15: 0,
-    hours24: 0,
-    days3: 0,
-    days7: 0,
-    days30: 0,
+    minutes1: "",
+    minutes5: "",
+    minutes10: "",
+    minutes15: "",
+    minutes30: "",
+    minutes60: "",
+    hours3: "",
+    hours8: "",
+    hours15: "",
+    hours24: "",
+    days3: "",
+    days7: "",
+    days30: "",
   };
   const [building, setBuilding] = useState(initialSpeedupsState);
   const [training, setTraining] = useState(initialSpeedupsState);
@@ -73,19 +73,19 @@ const Speedups = () => {
 
   const calculateTotalMinutes = (speedupType, state) => {
     return (
-      state[speedupType].minutes1 * 1 +
-      state[speedupType].minutes5 * 5 +
-      state[speedupType].minutes10 * 10 +
-      state[speedupType].minutes15 * 15 +
-      state[speedupType].minutes30 * 30 +
-      state[speedupType].minutes60 * 60 +
-      state[speedupType].hours3 * 60 * 3 +
-      state[speedupType].hours8 * 60 * 8 +
-      state[speedupType].hours15 * 60 * 15 +
-      state[speedupType].hours24 * 60 * 24 +
-      state[speedupType].days3 * 60 * 24 * 3 +
-      state[speedupType].days7 * 60 * 24 * 7 +
-      state[speedupType].days30 * 60 * 24 * 30
+      (parseInt(state[speedupType].minutes1) || 0) * 1 +
+      (parseInt(state[speedupType].minutes5) || 0) * 5 +
+      (parseInt(state[speedupType].minutes10) || 0) * 10 +
+      (parseInt(state[speedupType].minutes15) || 0) * 15 +
+      (parseInt(state[speedupType].minutes30) || 0) * 30 +
+      (parseInt(state[speedupType].minutes60) || 0) * 60 +
+      (parseInt(state[speedupType].hours3) || 0) * 60 * 3 +
+      (parseInt(state[speedupType].hours8) || 0) * 60 * 8 +
+      (parseInt(state[speedupType].hours15) || 0) * 60 * 15 +
+      (parseInt(state[speedupType].hours24) || 0) * 60 * 24 +
+      (parseInt(state[speedupType].days3) || 0) * 60 * 24 * 3 +
+      (parseInt(state[speedupType].days7) || 0) * 60 * 24 * 7 +
+      (parseInt(state[speedupType].days30) || 0) * 60 * 24 * 30
     );
   };
 
