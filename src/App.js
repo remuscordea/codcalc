@@ -73,7 +73,7 @@ const App = () => {
           </nav>
 
           <div className="main">
-            <h1>Items Calculator</h1>
+            <h1>CoD Calculator</h1>
 
             <Routes>
               <Route
@@ -112,7 +112,7 @@ const App = () => {
           </div>
 
           <footer>
-            Powered by <span>Maximiks</span>
+            @ <span>Maximiks</span>
           </footer>
         </div>
       </div>
