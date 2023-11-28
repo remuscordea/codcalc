@@ -64,7 +64,7 @@ const Resources = ({
       (parseInt(state[rssType].k500) || 0) * 500000 +
       (parseInt(state[rssType].m1) || 0) * 1500000 +
       (parseInt(state[rssType].m5) || 0) * 5000000 +
-      (parseInt(state[rssType].open) || 0) * 1;
+      (parseInt(state[rssType].gathered) || 0) * 1000000;
 
     return total.toLocaleString("en-US");
   };
@@ -78,7 +78,7 @@ const Resources = ({
       (parseInt(ore.k500) || 0) * 375000 +
       (parseInt(ore.m1) || 0) * 1125000 +
       (parseInt(ore.m5) || 0) * 3750000 +
-      (parseInt(ore.open) || 0) * 1;
+      (parseInt(ore.gathered) || 0) * 1000000;
 
     return total.toLocaleString("en-US");
   };
@@ -92,7 +92,7 @@ const Resources = ({
       (parseInt(mana.k500) || 0) * 200000 +
       (parseInt(mana.m1) || 0) * 600000 +
       (parseInt(mana.m5) || 0) * 2000000 +
-      (parseInt(mana.open) || 0) * 1;
+      (parseInt(mana.gathered) || 0) * 1000000;
 
     return total.toLocaleString("en-US");
   };
@@ -121,12 +121,11 @@ const Resources = ({
             <div className="sectionCard">
               <InputField
                 label="Gathered"
-                name="open"
-                placeholder="Enter value"
-                value={gold.open}
+                name="gathered"
+                placeholder="Millions"
+                value={gold.gathered}
                 onChange={(e) => handleChange(e, type.gold)}
               />
-              <br />
               <InputField
                 label="1.000"
                 name="k1"
@@ -180,10 +179,10 @@ const Resources = ({
 
             <div className="sectionCard">
               <InputField
-                label="Gathered"
-                name="open"
-                placeholder="Enter value"
-                value={wood.open}
+                label="Gathered (M)"
+                name="gathered"
+                placeholder="Millions"
+                value={wood.gathered}
                 onChange={(e) => handleChange(e, type.wood)}
               />
               <InputField
@@ -238,10 +237,10 @@ const Resources = ({
             </div>
             <div className="sectionCard">
               <InputField
-                label="Gathered"
-                name="open"
-                placeholder="Enter value"
-                value={ore.open}
+                label="Gathered (M)"
+                name="gathered"
+                placeholder="Millions"
+                value={ore.gathered}
                 onChange={(e) => handleChange(e, type.ore)}
               />
               <InputField
@@ -296,10 +295,10 @@ const Resources = ({
             </div>
             <div className="sectionCard">
               <InputField
-                label="Gathered"
-                name="open"
-                placeholder="Enter value"
-                value={mana.open}
+                label="Gathered (M)"
+                name="gathered"
+                placeholder="Millions"
+                value={mana.gathered}
                 onChange={(e) => handleChange(e, type.mana)}
               />
               <InputField
@@ -354,17 +353,14 @@ const Resources = ({
             <h4>Gold: </h4>
             {totalGold}
           </span>
-          <br />
           <span>
             <h4>Wood: </h4>
             {totalWood}
           </span>
-          <br />
           <span>
             <h4>Ore: </h4>
             {totalOre}
           </span>
-          <br />
           <span>
             <h4>Mana: </h4>
             {totalMana}

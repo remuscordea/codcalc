@@ -30,7 +30,7 @@ const App = () => {
     k500: "",
     m1: "",
     m5: "",
-    open: "",
+    gathered: "",
   };
 
   const [building, setBuilding] = useState(initialSpeedupsState);

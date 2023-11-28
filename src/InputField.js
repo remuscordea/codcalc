@@ -1,4 +1,5 @@
 import React from "react";
+import "./InputField.css";
 
 const InputField = ({ label, name, value, onChange, placeholder }) => (
   <div style={{ height: "50px" }}>

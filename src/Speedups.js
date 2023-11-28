@@ -474,17 +474,14 @@ const Speedups = ({
             <h4>Building: </h4>
             {`${buildingTimeObject.days} days, ${buildingTimeObject.hours} hours and ${buildingTimeObject.minutes} minutes`}
           </span>
-          <br />
           <span>
             <h4>Training: </h4>
             {`${trainingTimeObject.days} days, ${trainingTimeObject.hours} hours and ${trainingTimeObject.minutes} minutes`}
           </span>
-          <br />
           <span>
             <h4>Research: </h4>
             {`${researchTimeObject.days} days, ${researchTimeObject.hours} hours and ${researchTimeObject.minutes} minutes`}
           </span>
-          <br />
           <span>
             <h4>Universals: </h4>
             {`${universalTimeObject.days} days, ${universalTimeObject.hours} hours and ${universalTimeObject.minutes} minutes`}
