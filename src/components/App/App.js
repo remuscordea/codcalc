@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import classnames from "classnames";
-import Speedups from "./Speedups";
-import Resources from "./Resources";
+import Speedups from "../Speedups/Speedups.js";
+import Resources from "../Resources/Resources.js";
 import "./App.css";
 
 const App = () => {

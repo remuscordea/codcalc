@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import InputField from "./InputField";
+import InputField from "../InputField/InputField.js";
 import "./Resources.css";
 
 const Resources = ({
