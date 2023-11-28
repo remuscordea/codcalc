@@ -8,10 +8,12 @@ const Resources = ({
   wood,
   ore,
   mana,
+  choice,
   setGold,
   setWood,
   setOre,
   setMana,
+  setChoice,
   handleReset,
 }) => {
   const type = {
@@ -19,6 +21,7 @@ const Resources = ({
     wood: "wood",
     ore: "ore",
     mana: "mana",
+    choice: "choice",
   };
 
   const handleChange = (event, speedupType) => {
@@ -46,6 +49,12 @@ const Resources = ({
         break;
       case type.mana:
         setMana((prevData) => ({
+          ...prevData,
+          [name]: newValue,
+        }));
+        break;
+      case type.choice:
+        setChoice((prevData) => ({
           ...prevData,
           [name]: newValue,
         }));
@@ -97,18 +106,44 @@ const Resources = ({
     return total.toLocaleString("en-US");
   };
 
+  const calculateChoicePacks = () => {
+    const totalGold = (
+      (parseInt(choice.lvl2) || 0) * 50000 +
+      (parseInt(choice.lvl3) || 0) * 150000 +
+      (parseInt(choice.lvl4) || 0) * 500000
+    ).toLocaleString("en-US");
+
+    const totalWood = (
+      (parseInt(choice.lvl2) || 0) * 50000 +
+      (parseInt(choice.lvl3) || 0) * 150000 +
+      (parseInt(choice.lvl4) || 0) * 500000
+    ).toLocaleString("en-US");
+
+    const totalOre = (
+      (parseInt(choice.lvl2) || 0) * 37500 +
+      (parseInt(choice.lvl3) || 0) * 112500 +
+      (parseInt(choice.lvl4) || 0) * 375000
+    ).toLocaleString("en-US");
+
+    const totalMana = (
+      (parseInt(choice.lvl2) || 0) * 15000 +
+      (parseInt(choice.lvl3) || 0) * 50000 +
+      (parseInt(choice.lvl4) || 0) * 200000
+    ).toLocaleString("en-US");
+
+    return `${totalGold} gold / ${totalWood} wood / ${totalOre} ore / ${totalMana} mana`;
+  };
+
   const totalGold = calculateTotalResources(type.gold, { gold });
   const totalWood = calculateTotalResources(type.wood, { wood });
   const totalOre = calculateOre();
   const totalMana = calculateMana();
+  const totalChoice = calculateChoicePacks();
 
   return (
     <div>
       <header>
         <h2>Resources</h2>
-        <button className="resetBtn" onClick={handleReset}>
-          Reset
-        </button>
       </header>
 
       <div className="mainContainer">
@@ -345,10 +380,38 @@ const Resources = ({
               />
             </div>
           </section>
+
+          <section className={classnames("sectionContainer", "choice")}>
+            <div className="sectionHeader">
+              <h3>Choice packs</h3>
+              <span className={"sectionTotal"}>({totalChoice})</span>
+            </div>
+            <div className="sectionCard">
+              <InputField
+                label="Level 2"
+                name="lvl2"
+                value={choice.lvl2}
+                onChange={(e) => handleChange(e, type.choice)}
+              />
+              <InputField
+                label="Level 3"
+                name="lvl3"
+                value={choice.lvl3}
+                onChange={(e) => handleChange(e, type.choice)}
+              />
+              <InputField
+                label="Level 4"
+                name="lvl4"
+                value={choice.lvl4}
+                onChange={(e) => handleChange(e, type.choice)}
+              />
+            </div>
+          </section>
         </div>
 
         <div className="summaryContainer">
           <h3>Summary</h3>
+
           <span>
             <h4>Gold: </h4>
             {totalGold}
@@ -365,6 +428,16 @@ const Resources = ({
             <h4>Mana: </h4>
             {totalMana}
           </span>
+          <span>
+            <h4>Choice packs: </h4>
+            {totalChoice}
+          </span>
+
+          <div className="summaryReset">
+            <button className="resetBtn" onClick={handleReset}>
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -13,3 +13,7 @@
 .sectionContainer.mana h3 {
     color: rgb(117, 131, 255);
 }
+
+.sectionContainer.choice h3 {
+    color: #020b61
+}

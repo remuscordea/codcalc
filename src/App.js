@@ -21,8 +21,8 @@ const App = () => {
     days7: "",
     days30: "",
   };
-
   const initialResources = {
+    gathered: "",
     k1: "",
     k10: "",
     k50: "",
@@ -30,7 +30,11 @@ const App = () => {
     k500: "",
     m1: "",
     m5: "",
-    gathered: "",
+  };
+  const initialChoicePacks = {
+    lvl2: "",
+    lvl3: "",
+    lvl4: "",
   };
 
   const [building, setBuilding] = useState(initialSpeedupsState);
@@ -41,6 +45,7 @@ const App = () => {
   const [wood, setWood] = useState(initialResources);
   const [ore, setOre] = useState(initialResources);
   const [mana, setMana] = useState(initialResources);
+  const [choice, setChoice] = useState(initialChoicePacks);
 
   const resetSpeedups = () => {
     setBuilding(initialSpeedupsState);
@@ -54,7 +59,7 @@ const App = () => {
     setWood(initialResources);
     setOre(initialResources);
     setMana(initialResources);
-    localStorage.removeItem("lsGold");
+    setChoice(initialChoicePacks);
   };
 
   return (
@@ -104,6 +109,8 @@ const App = () => {
                     setOre={setOre}
                     mana={mana}
                     setMana={setMana}
+                    choice={choice}
+                    setChoice={setChoice}
                     handleReset={resetResources}
                   />
                 }
@@ -112,7 +119,7 @@ const App = () => {
           </div>
 
           <footer>
-            @ <span>Maximiks</span>
+            <span>Maximiks</span> @ 2023
           </footer>
         </div>
       </div>
