@@ -107,9 +107,6 @@ const Speedups = ({
     <div>
       <header>
         <h2>Speedups</h2>
-        <button className="resetBtn" onClick={handleReset}>
-          Reset
-        </button>
       </header>
 
       <div className="mainContainer">
@@ -486,6 +483,12 @@ const Speedups = ({
             <h4>Universals: </h4>
             {`${universalTimeObject.days} days, ${universalTimeObject.hours} hours and ${universalTimeObject.minutes} minutes`}
           </span>
+
+          <div className="summaryReset">
+            <button className="resetBtn" onClick={handleReset}>
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </div>
