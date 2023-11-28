@@ -1,66 +1,15 @@
-.speedupsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.speedupsArticle {
-    padding: 20px;
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-.speedupsArticle.building {
-    border: 3px solid #58ad58;
-}
-
-.speedupsArticle.building h3 {
+.sectionContainer.building h3 {
     color: #3a833a;
 }
 
-.speedupsArticle.training {
-    border: 3px solid #ed4c4c
-}
-
-.speedupsArticle.training h3 {
+.sectionContainer.training h3 {
     color: #ff3f3f
 }
 
-.speedupsArticle.research {
-    border: 3px solid #0086d7;
-}
-
-.speedupsArticle.research h3 {
+.sectionContainer.research h3 {
     color: #0086d7;
 }
 
-.speedupsArticle.universal {
-    border: 3px solid #8f8f8f;
-}
-
-.speedupsArticle.universal h3 {
+.sectionContainer.universal h3 {
     color: #737272
-}
-
-.speedupsSection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* Media query for tablets */
-@media screen and (min-width: 768px) {
-    .speedupsContainer {
-        justify-content: space-around;
-    }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1024px) {
-    .speedupsContainer {
-        justify-content: space-between;
-    }
 }

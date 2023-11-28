@@ -122,13 +122,13 @@ const Resources = () => {
         </button>
       </header>
 
-      <div className="rssContainer">
-        <article className={classnames("rssArticle", "gold")}>
-          <div className="articleHeader">
+      <div className="container">
+        <section className={classnames("sectionContainer", "gold")}>
+          <div className="sectionHeader">
             <h3>Gold</h3>
             <span className={"sectionTotal"}>({totalGold})</span>
           </div>
-          <section className="rssSection">
+          <div className="sectionCard">
             <InputField
               label="Gathered"
               name="open"
@@ -178,16 +178,16 @@ const Resources = () => {
               value={gold.m5}
               onChange={(e) => handleResources(e, type.gold)}
             />
-          </section>
-        </article>
+          </div>
+        </section>
 
-        <article className={classnames("rssArticle", "wood")}>
-          <div className="articleHeader">
+        <section className={classnames("sectionContainer", "wood")}>
+          <div className="sectionHeader">
             <h3>Wood</h3>
             <span className={"sectionTotal"}>({totalWood})</span>
           </div>
 
-          <section className="rssSection">
+          <div className="sectionCard">
             <InputField
               label="Gathered"
               name="open"
@@ -237,15 +237,15 @@ const Resources = () => {
               value={wood.m5}
               onChange={(e) => handleResources(e, type.wood)}
             />
-          </section>
-        </article>
+          </div>
+        </section>
 
-        <article className={classnames("rssArticle", "ore")}>
-          <div className="articleHeader">
+        <section className={classnames("sectionContainer", "ore")}>
+          <div className="sectionHeader">
             <h3>Ore</h3>
             <span className={"sectionTotal"}>({totalOre})</span>
           </div>
-          <section className="rssSection">
+          <div className="sectionCard">
             <InputField
               label="Gathered"
               name="open"
@@ -295,15 +295,15 @@ const Resources = () => {
               value={ore.m5}
               onChange={(e) => handleResources(e, type.ore)}
             />
-          </section>
-        </article>
+          </div>
+        </section>
 
-        <article className={classnames("rssArticle", "mana")}>
-          <div className="articleHeader">
+        <section className={classnames("sectionContainer", "mana")}>
+          <div className="sectionHeader">
             <h3>Mana</h3>
             <span className={"sectionTotal"}>({totalMana})</span>
           </div>
-          <section className="rssSection">
+          <div className="sectionCard">
             <InputField
               label="Gathered"
               name="open"
@@ -353,8 +353,8 @@ const Resources = () => {
               value={mana.m5}
               onChange={(e) => handleResources(e, type.mana)}
             />
-          </section>
-        </article>
+          </div>
+        </section>
       </div>
       <div className="summaryContainer">
         <div className="totals">

@@ -1,65 +1,15 @@
-.rssContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.rssArticle {
-    padding: 20px;
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-.rssArticle.gold h3 {
+.sectionContainer.gold h3 {
     color: rgb(204, 174, 1);
 }
 
-.rssArticle.gold {
-    border: 3px solid rgb(204, 174, 1);
-}
-
-.rssArticle.wood h3 {
+.sectionContainer.wood h3 {
     color: rgb(136, 109, 76);
 }
 
-.rssArticle.wood {
-    border: 3px solid rgb(136, 109, 76);
-}
-
-.rssArticle.ore h3 {
+.sectionContainer.ore h3 {
     color: rgb(107, 107, 107);
 }
 
-.rssArticle.ore {
-    border: 3px solid rgb(107, 107, 107);
-}
-
-.rssArticle.mana h3 {
+.sectionContainer.mana h3 {
     color: rgb(117, 131, 255);
-}
-
-.rssArticle.mana {
-    border: 2px solid rgb(117, 131, 255);
-}
-
-.rssSection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Media query for tablets */
-@media screen and (min-width: 768px) {
-    .speedupsContainer {
-        justify-content: space-around;
-    }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1024px) {
-    .speedupsContainer {
-        justify-content: space-between;
-    }
 }

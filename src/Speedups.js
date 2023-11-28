@@ -128,15 +128,15 @@ const Speedups = () => {
         </button>
       </header>
 
-      <div className="speedupsContainer">
-        <article className={classnames("speedupsArticle", "building")}>
-          <div className="articleHeader">
+      <div className="container">
+        <section className={classnames("sectionContainer", "building")}>
+          <div className="sectionHeader">
             <h3>Building</h3>
             <span className={"sectionTotal"}>
               {`(${buildingTimeObject.days} days, ${buildingTimeObject.hours} hours and ${buildingTimeObject.minutes} minutes)`}
             </span>
           </div>
-          <section className="speedupsSection">
+          <div className="sectionCard">
             <InputField
               label="1 minute"
               name="minutes1"
@@ -215,16 +215,16 @@ const Speedups = () => {
               value={building.days30}
               onChange={(e) => handleSpeedups(e, type.building)}
             />
-          </section>
-        </article>
-        <article className={classnames("speedupsArticle", "training")}>
-          <div className="articleHeader">
+          </div>
+        </section>
+        <section className={classnames("sectionContainer", "training")}>
+          <div className="sectionHeader">
             <h3>Training</h3>
             <span className={"sectionTotal"}>
               {`(${trainingTimeObject.days} days, ${trainingTimeObject.hours} hours and ${trainingTimeObject.minutes} minutes)`}
             </span>
           </div>
-          <section className="speedupsSection">
+          <div className="sectionCard">
             <InputField
               label="1 minute"
               name="minutes1"
@@ -303,16 +303,16 @@ const Speedups = () => {
               value={training.days30}
               onChange={(e) => handleSpeedups(e, type.training)}
             />
-          </section>
-        </article>
-        <article className={classnames("speedupsArticle", "research")}>
-          <div className="articleHeader">
+          </div>
+        </section>
+        <section className={classnames("sectionContainer", "research")}>
+          <div className="sectionHeader">
             <h3>Research</h3>
             <span className={"sectionTotal"}>
               {`(${researchTimeObject.days} days, ${researchTimeObject.hours} hours and ${researchTimeObject.minutes} minutes )`}
             </span>
           </div>
-          <section className="speedupsSection">
+          <div className="sectionCard">
             <InputField
               label="1 minute"
               name="minutes1"
@@ -391,16 +391,16 @@ const Speedups = () => {
               value={research.days30}
               onChange={(e) => handleSpeedups(e, type.research)}
             />
-          </section>
-        </article>
-        <article className={classnames("speedupsArticle", "universal")}>
-          <div className="articleHeader">
+          </div>
+        </section>
+        <section className={classnames("sectionContainer", "universal")}>
+          <div className="sectionHeader">
             <h3>Universals</h3>
             <span className={"sectionTotal"}>
               {`(${universalTimeObject.days} days, ${universalTimeObject.hours} hours and ${universalTimeObject.minutes} minutes)`}
             </span>
           </div>
-          <section className="speedupsSection">
+          <div className="sectionCard">
             <InputField
               label="1 minute"
               name="minutes1"
@@ -479,8 +479,8 @@ const Speedups = () => {
               value={universal.days30}
               onChange={(e) => handleSpeedups(e, type.universal)}
             />
-          </section>
-        </article>
+          </div>
+        </section>
       </div>
       <div className="summaryContainer">
         <div className="totals">
