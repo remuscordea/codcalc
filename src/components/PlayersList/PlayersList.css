@@ -1,7 +1,5 @@
 .listContainer {
-    height: 1000px;
-    width: 800px;
-    background-color: red;
+    max-width: 400px;
 }
 
 .listContainer img {
