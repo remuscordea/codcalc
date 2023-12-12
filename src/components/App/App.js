@@ -116,7 +116,7 @@ const App = () => {
                   />
                 }
               />
-              <Route path="/war" element={<PlayersList />} />
+              <Route path="/ps" element={<PlayersList />} />
             </Routes>
           </div>
 
