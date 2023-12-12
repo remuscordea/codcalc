@@ -122,6 +122,7 @@ const App = () => {
 
           <footer>
             <span>Maximiks</span> @ 2023
+            <Link to="/ps">.</Link>
           </footer>
         </div>
       </div>
