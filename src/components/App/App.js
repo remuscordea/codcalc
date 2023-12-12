@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import classnames from "classnames";
 import Speedups from "../Speedups/Speedups.js";
 import Resources from "../Resources/Resources.js";
+import PlayersList from "../PlayersList/PlayersList.js";
 import "./App.css";
 
 const App = () => {
@@ -115,6 +116,7 @@ const App = () => {
                   />
                 }
               />
+              <Route path="/war" element={<PlayersList />} />
             </Routes>
           </div>
 
