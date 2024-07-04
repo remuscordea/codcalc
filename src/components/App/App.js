@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import classnames from "classnames";
-import Speedups from "../Speedups/Speedups.js";
-import Resources from "../Resources/Resources.js";
-import PlayersList from "../PlayersList/PlayersList.js";
-import "./App.css";
+import React, { useState } from "react"
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom"
+import classnames from "classnames"
+import Speedups from "../Speedups/Speedups.js"
+import Resources from "../Resources/Resources.js"
+import "./App.css"
 
 const App = () => {
   const initialSpeedupsState = {
@@ -21,7 +20,7 @@ const App = () => {
     days3: "",
     days7: "",
     days30: "",
-  };
+  }
   const initialResources = {
     gathered: "",
     k1: "",
@@ -31,37 +30,37 @@ const App = () => {
     k500: "",
     m1: "",
     m5: "",
-  };
+  }
   const initialChoicePacks = {
     lvl2: "",
     lvl3: "",
     lvl4: "",
-  };
+  }
 
-  const [building, setBuilding] = useState(initialSpeedupsState);
-  const [training, setTraining] = useState(initialSpeedupsState);
-  const [research, setResearch] = useState(initialSpeedupsState);
-  const [universal, setUniversal] = useState(initialSpeedupsState);
-  const [gold, setGold] = useState(initialResources);
-  const [wood, setWood] = useState(initialResources);
-  const [ore, setOre] = useState(initialResources);
-  const [mana, setMana] = useState(initialResources);
-  const [choice, setChoice] = useState(initialChoicePacks);
+  const [building, setBuilding] = useState(initialSpeedupsState)
+  const [training, setTraining] = useState(initialSpeedupsState)
+  const [research, setResearch] = useState(initialSpeedupsState)
+  const [universal, setUniversal] = useState(initialSpeedupsState)
+  const [gold, setGold] = useState(initialResources)
+  const [wood, setWood] = useState(initialResources)
+  const [ore, setOre] = useState(initialResources)
+  const [mana, setMana] = useState(initialResources)
+  const [choice, setChoice] = useState(initialChoicePacks)
 
   const resetSpeedups = () => {
-    setBuilding(initialSpeedupsState);
-    setTraining(initialSpeedupsState);
-    setResearch(initialSpeedupsState);
-    setUniversal(initialSpeedupsState);
-  };
+    setBuilding(initialSpeedupsState)
+    setTraining(initialSpeedupsState)
+    setResearch(initialSpeedupsState)
+    setUniversal(initialSpeedupsState)
+  }
 
   const resetResources = () => {
-    setGold(initialResources);
-    setWood(initialResources);
-    setOre(initialResources);
-    setMana(initialResources);
-    setChoice(initialChoicePacks);
-  };
+    setGold(initialResources)
+    setWood(initialResources)
+    setOre(initialResources)
+    setMana(initialResources)
+    setChoice(initialChoicePacks)
+  }
 
   return (
     <Router>
@@ -116,7 +115,6 @@ const App = () => {
                   />
                 }
               />
-              <Route path="/ps" element={<PlayersList />} />
             </Routes>
           </div>
 
@@ -127,7 +125,7 @@ const App = () => {
         </div>
       </div>
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App
